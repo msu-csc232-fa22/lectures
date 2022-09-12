@@ -19,16 +19,23 @@ public:
     ~MemoryCell( );
 
     /**
-     * Copy Constructor.
+     * Big Five: Copy Constructor.
      * @param src the source object (l-reference) used to create this MemoryCell
      */
     MemoryCell( const MemoryCell<T> & src );
 
     /**
-     * Move Constructor.
+     * Big Five: Move Constructor.
      * @param src the source object (r-reference) used to create this MemoryCell
      */
     MemoryCell( MemoryCell<T> && src ) noexcept;
+
+    /**
+     * Big Five: Copy Assignment Operator.
+     * @param rhs the source object (l-reference) used to assign the attributes of this MemoryCell
+     * @return a reference to newly created object is returned.
+     */
+    MemoryCell & operator=( const MemoryCell & rhs );
 
 private:
     T storedValue;

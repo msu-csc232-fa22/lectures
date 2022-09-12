@@ -44,3 +44,15 @@ MemoryCell<T>::MemoryCell( MemoryCell<T> && src )  noexcept : storedValue{ src.s
     std::cout << "A new Memory cell is created with the value " << storedValue << "...\n";
 }
 
+template<typename T>
+MemoryCell<T> & MemoryCell<T>::operator=( const MemoryCell &rhs )
+{
+    std::cout << "Big Five (Copy Assignment Operator): ";
+    std::cout << "This cell was assigned a new storedValue: " << rhs.storedValue << " via an assignment operation...\n";
+    if ( this != &rhs )
+    {
+        storedValue = rhs.storedValue;
+    }
+    return *this;
+}
+

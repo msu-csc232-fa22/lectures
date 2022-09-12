@@ -23,5 +23,9 @@ int main( int argc, char * argv[ ] )
     std::cout << "movedCell is storing:  " << movedCell.read() << "\n";
     // Note: Since we moved charCell, we shouldn't use it anymore
 
+    MemoryCell<int> numberCell{ 0 };
+    numberCell = intCell;
+    std::cout << "numCell is storing:    " << numberCell.read() << "\n";
+
     return EXIT_SUCCESS;
 }
