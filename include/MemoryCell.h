@@ -38,6 +38,11 @@ public:
     MemoryCell & operator=( const MemoryCell & rhs );
 
 
+    /**
+     * Big Five: Move Assignment Operator.
+     * @param rhs the source object (r-reference) used to assign the attributes of this MemoryCell
+     * @return a reference to new created object is returned.
+     */
     MemoryCell & operator=( MemoryCell && rhs ) noexcept ;
 
 private:
