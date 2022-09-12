@@ -37,6 +37,9 @@ public:
      */
     MemoryCell & operator=( const MemoryCell & rhs );
 
+
+    MemoryCell & operator=( MemoryCell && rhs ) noexcept ;
+
 private:
     T storedValue;
 };

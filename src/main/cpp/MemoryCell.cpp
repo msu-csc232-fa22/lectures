@@ -56,3 +56,12 @@ MemoryCell<T> & MemoryCell<T>::operator=( const MemoryCell &rhs )
     return *this;
 }
 
+template<typename T>
+MemoryCell<T> & MemoryCell<T>::operator=( MemoryCell && rhs ) noexcept
+{
+    std::cout << "Big Five (Move Assignment Operator): ";
+    std::cout << "This cell was assigned a new storedValue: " << rhs.storedValue << " via an assignment operation...\n";
+    std::swap( storedValue, rhs.storedValue );
+    return *this;
+}
+

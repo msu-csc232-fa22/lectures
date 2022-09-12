@@ -27,5 +27,8 @@ int main( int argc, char * argv[ ] )
     numberCell = intCell;
     std::cout << "numCell is storing:    " << numberCell.read() << "\n";
 
+    numberCell = MemoryCell<int>{ 92 };
+    std::cout << "numCell is storing:    " << numberCell.read() << "\n";
+
     return EXIT_SUCCESS;
 }
