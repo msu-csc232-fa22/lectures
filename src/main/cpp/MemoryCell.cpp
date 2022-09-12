@@ -30,3 +30,10 @@ MemoryCell<T>::~MemoryCell( )
     std::cout << "Memory cell with value " << storedValue << " is getting destroyed!\n";
 }
 
+template<typename T>
+MemoryCell<T>::MemoryCell(const MemoryCell<T> &src) : storedValue{ src.storedValue }
+{
+    std::cout << "Big Five (Copy Constructor): ";
+    std::cout << "A new Memory cell is created with the value " << storedValue << "...\n";
+}
+

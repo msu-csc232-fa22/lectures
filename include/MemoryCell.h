@@ -13,7 +13,17 @@ public:
     const T & read( ) const;
     void write( const T & x );
     // The Big Five
+    /**
+     * Big Five: Destructor.
+     */
     ~MemoryCell( );
+
+    /**
+     * Copy Constructor.
+     * @param src the source object used to create this MemoryCell
+     */
+    MemoryCell( const MemoryCell<T> & src );
+
 private:
     T storedValue;
 };

@@ -15,5 +15,9 @@ int main( int argc, char * argv[ ] )
     std::cout << "Policy has it that we all start with an " << charCell.read() << "!\n";
     std::cout << std::endl;
 
+    intCell.write( 6 );
+    MemoryCell<int> intCellCopy{ intCell };
+    std::cout << "intCellCopy is storing: " << intCellCopy.read() << "\n";
+
     return EXIT_SUCCESS;
 }
