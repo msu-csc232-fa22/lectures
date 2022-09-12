@@ -19,5 +19,9 @@ int main( int argc, char * argv[ ] )
     MemoryCell<int> intCellCopy{ intCell };
     std::cout << "intCellCopy is storing: " << intCellCopy.read() << "\n";
 
+    MemoryCell<char> movedCell{ std::move( charCell ) };
+    std::cout << "movedCell is storing:  " << movedCell.read() << "\n";
+    // Note: Since we moved charCell, we shouldn't use it anymore
+
     return EXIT_SUCCESS;
 }

@@ -31,9 +31,16 @@ MemoryCell<T>::~MemoryCell( )
 }
 
 template<typename T>
-MemoryCell<T>::MemoryCell(const MemoryCell<T> &src) : storedValue{ src.storedValue }
+MemoryCell<T>::MemoryCell( const MemoryCell<T> &src ) : storedValue{ src.storedValue }
 {
     std::cout << "Big Five (Copy Constructor): ";
+    std::cout << "A new Memory cell is created with the value " << storedValue << "...\n";
+}
+
+template<typename T>
+MemoryCell<T>::MemoryCell( MemoryCell<T> && src )  noexcept : storedValue{ src.storedValue }
+{
+    std::cout << "Big Five (Move Constructor): ";
     std::cout << "A new Memory cell is created with the value " << storedValue << "...\n";
 }
 

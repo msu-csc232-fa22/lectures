@@ -20,9 +20,15 @@ public:
 
     /**
      * Copy Constructor.
-     * @param src the source object used to create this MemoryCell
+     * @param src the source object (l-reference) used to create this MemoryCell
      */
     MemoryCell( const MemoryCell<T> & src );
+
+    /**
+     * Move Constructor.
+     * @param src the source object (r-reference) used to create this MemoryCell
+     */
+    MemoryCell( MemoryCell<T> && src ) noexcept;
 
 private:
     T storedValue;
