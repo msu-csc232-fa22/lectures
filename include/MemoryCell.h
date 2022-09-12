@@ -9,9 +9,11 @@ template <typename T>
 class MemoryCell
 {
 public:
-    explicit MemoryCell(const T & initialValue = new T{ } );
+    explicit MemoryCell( const T & initialValue = new T{ } );
     const T & read( ) const;
     void write( const T & x );
+    // The Big Five
+    ~MemoryCell( );
 private:
     T storedValue;
 };
