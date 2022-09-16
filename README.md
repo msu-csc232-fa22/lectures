@@ -21,6 +21,7 @@ This repo is mean to complement lecture material.
 | 85e89ae29074b681ec9373d870f083fea599a754 | Add Copy Assignment Operator           |
 | 9f0297f42c5f8e5df272051d798a5f6263e9e7d0 | Add Move Assignment Operator           |
 | c1b6c61873ceb78ab1909dbe306e605ddcf5f67c | Initial import of problematic big five |
+| 0a5c84736f6d2cd3ff2f5e25a40a4e79dd1f54ac | Fix problem with big five overloads    |
 
 ```shell
 git checkout 92e9e44
