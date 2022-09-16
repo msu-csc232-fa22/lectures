@@ -11,11 +11,14 @@
 #define MSU_CSC232_EXPANDED_TEMPLATES_H__
 
 #include "MemoryCell.cpp"
+#include "IndirectMemoryCell.cpp"
 #include <string>
 
 /* Include class template implementation files as needed */
 template class MemoryCell<int>;
 template class MemoryCell<std::string>;
 template class MemoryCell<char>;
+
+template class IndirectMemoryCell<int>;
 
 #endif // MSU_CSC232_EXPANDED_TEMPLATES_H__

@@ -30,6 +30,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(SRC_MAIN_FILES src/main/cpp/main.cpp)
 set(SRC_DEMO_FILES src/main/cpp/demo.cpp)
 set(SRC_BIG_FIVE_FILES src/main/cpp/MemoryCell.cpp src/main/cpp/MemoryCellDriver.cpp)
+set(SRC_BIG_FIVE_REQ_FILES src/main/cpp/IndirectMemoryCell.cpp src/main/cpp/IndirectMemoryCellDriver.cpp)
 set(SRC_TEST_FILES src/test/cpp/unit_tests.cpp)
 
 # Setup Google Test
@@ -48,6 +49,7 @@ enable_testing()
 add_executable(main ${SRC_MAIN_FILES})
 add_executable(demo ${SRC_DEMO_FILES})
 add_executable(big-five ${SRC_BIG_FIVE_FILES})
+add_executable(big-five-req ${SRC_BIG_FIVE_REQ_FILES})
 add_executable(google-tests ${SRC_TEST_FILES})
 
 # Now simply link against gtest or gtest_main as needed.
@@ -58,6 +60,7 @@ gtest_discover_tests(google-tests)
 target_include_directories(main PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)
 target_include_directories(demo PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)
 target_include_directories(big-five PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)
+target_include_directories(big-five-req PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)
 
 target_include_directories(google-tests PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)
 
