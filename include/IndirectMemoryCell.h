@@ -16,26 +16,26 @@ public:
     /**
      * Big Five: Destructor.
      */
-    ~IndirectMemoryCell( ) = default;
+    ~IndirectMemoryCell( );
 
     /**
      * Big Five: Copy Constructor.
      * @param src the source object (l-reference) used to create this IndirectMemoryCell
      */
-    IndirectMemoryCell( const IndirectMemoryCell<T> & src ) = default;
+    IndirectMemoryCell( const IndirectMemoryCell<T> & src );
 
     /**
      * Big Five: Move Constructor.
      * @param src the source object (r-reference) used to create this IndirectMemoryCell
      */
-    IndirectMemoryCell( IndirectMemoryCell<T> && src ) noexcept = default;
+    IndirectMemoryCell( IndirectMemoryCell<T> && src ) noexcept;
 
     /**
      * Big Five: Copy Assignment Operator.
      * @param rhs the source object (l-reference) used to assign the attributes of this IndirectMemoryCell
      * @return a reference to newly created object is returned.
      */
-    IndirectMemoryCell & operator=( const IndirectMemoryCell & rhs ) = default;
+    IndirectMemoryCell & operator=( const IndirectMemoryCell & rhs );
 
 
     /**
@@ -43,7 +43,7 @@ public:
      * @param rhs the source object (r-reference) used to assign the attributes of this IndirectMemoryCell
      * @return a reference to new created object is returned.
      */
-    IndirectMemoryCell & operator=( IndirectMemoryCell && rhs ) noexcept = default;
+    IndirectMemoryCell & operator=( IndirectMemoryCell && rhs ) noexcept;
 
 private:
     T * storedValue;
